@@ -10,9 +10,9 @@ jobs:
           name: Update npm
           command: 'sudo npm install -g npm@latest'
       - restore_cache:
-        keys:
-          - dependecy-cache-{{checksum "package-lock.json"}}
-          - dependecy-cache
+          keys:
+            - dependecy-cache-{{checksum "package-lock.json"}}
+            - dependecy-cache
       - run:
           name: Install npm packages
           command: npm install
